@@ -8,6 +8,5 @@ module.exports = (function() {
     page: true
   }
 
-
   return site;
 })();
