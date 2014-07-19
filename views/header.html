@@ -1,13 +1,15 @@
 </head>
 <body>
 
-<header>
+<header style="background-image: url(images/headerImg.jpg)">
   <nav>
     <ul>
       <% for (var i = 0; i < site.nav.length; i++) { %>
-      <li><%= site.nav[i] %></li>
+      <li><a href="#"><%= site.nav[i] %></a></li>
       <% } %>
     </ul>
   </nav>
+
+  <img src="images/sprite.png" alt=""/>
 
 </header>
