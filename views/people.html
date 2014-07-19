@@ -1,0 +1,9 @@
+<p><%= people.names %> and <%= people.titles %></p>
+
+<% for(var i = 0; i < people.names.length; i++) { %>
+  <div class="people">
+    <p><%= people.names[i] %></p>
+    <p><%= people.titles[i] %></p>
+    <p><%= people.bios[i] %></p>
+  </div>
+<% } %>
