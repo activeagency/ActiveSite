@@ -22,7 +22,7 @@ app.use("/js", express.static(__dirname + "/js"));
 
 var site = {
   title: "Active",
-  heading: "Future site for Active Angency",
+  heading: "Future site for Active Agency",
   env: "dev",
   page: true
 }
