@@ -27,8 +27,14 @@ var site = {
   page: true
 }
 
-app.get('/', function(req, res) {
+app.get('/info', function(req, res) {
   res.render('dev', {
+    site: site
+  });
+});
+
+app.get('/', function(req, res) {
+  res.render('index', {
     site: site
   });
 });
