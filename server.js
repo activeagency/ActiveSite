@@ -5,7 +5,8 @@
 var express = require('express'),
     ejs = require('ejs'),
     port,
-    app;
+    app,
+    site = require('./data/siteData.js');
 
 // init app
 app = express();
@@ -20,12 +21,6 @@ app.set('view engine', 'html');
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 
-var site = {
-  title: "Active",
-  heading: "Future site for Active Agency",
-  env: "dev",
-  page: true
-}
 
 app.get('/info', function(req, res) {
   res.render('dev', {
@@ -35,7 +30,8 @@ app.get('/info', function(req, res) {
 
 app.get('/', function(req, res) {
   res.render('index', {
-    site: site
+   site: site
+//   nav: nav
   });
 });
 
