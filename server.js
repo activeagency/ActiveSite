@@ -6,7 +6,7 @@ var express = require('express'),
     ejs = require('ejs'),
     port,
     app,
-    site = require('./data/siteData.js');
+    routes = require('./data/routes.js');
 
 // init app
 app = express();
@@ -21,19 +21,8 @@ app.set('view engine', 'html');
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 
-
-app.get('/info', function(req, res) {
-  res.render('dev', {
-    site: site
-  });
-});
-
-app.get('/', function(req, res) {
-  res.render('index', {
-   site: site
-//   nav: nav
-  });
-});
+// init routes
+routes(app);
 
 port = process.env.PORT || 9778;
 app.listen(port);
