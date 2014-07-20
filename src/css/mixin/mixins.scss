@@ -1,0 +1,12 @@
+@mixin right {
+  float: right;
+}
+
+@mixin sprite($x,$y) {
+  background: url('../images/sprite.png') $x $y;
+  background-repeat: no-repeat;
+}
+
+@mixin clear {
+  clear: both;
+}
