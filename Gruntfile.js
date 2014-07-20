@@ -9,14 +9,28 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'cssmian.css': 'main.scss'
+          'style.css': 'main.scss'
         }
       }
+    },
+
+    exec: {
+      run: {
+        cmd: 'node server.js'
+      },
+
+      deploy: {
+        cmd: 'git push heroku master'
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-exec');
 
   grunt.registerTask('default', []);
   grunt.registerTask('css', ['sass']);
+  grunt.registerTask('deploy', ['exec:deploy']);
+  grunt.registerTask('run', ['css', 'exec:run']);
 };
