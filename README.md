@@ -23,7 +23,7 @@ In terminal:
 ```
 cd ActiveSite
 npm install
-node server.js
+grunt run
 ```
 
 Navigate to localhost:9778/

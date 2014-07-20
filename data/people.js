@@ -1,7 +1,6 @@
 module.exports = function() {
 
   var People = {
-
     names: [
         'Justin',
         'Matt',
@@ -19,7 +18,6 @@ module.exports = function() {
         'Not sure what he is doing',
         'Does everything '
     ]
-
   };
 
   return People;

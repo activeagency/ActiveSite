@@ -1,15 +1,11 @@
-/**
- * Created by mattludwigs on 7/18/14.
- */
 module.exports = function(grunt) {
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
       dist: {
         files: {
-          'style.css': 'main.scss'
+          'css/style.css': 'src/css/main.scss'
         }
       }
     },
@@ -23,7 +19,6 @@ module.exports = function(grunt) {
         cmd: 'git push heroku master'
       }
     }
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
