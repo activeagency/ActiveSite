@@ -1,7 +1,6 @@
-module.exports = (function() {
-
+module.exports = function() {
   var site = {
-    title: "Acitve Angency",
+    title: "Active Agency",
     heading: "Future Site of Active Agency",
     nav: ['About', 'People', 'Work', 'Contact'],
     env: 'dev',
@@ -9,4 +8,4 @@ module.exports = (function() {
   }
 
   return site;
-})();
+};
