@@ -1,9 +1,10 @@
+var should = require('chai').should(),
+		supertest = require('supertest'),
+		app = require('./app.js');
+
+
 describe('Server', function () {
 	'use strict';
-	
-	var should = require('chai').should(),
-			supertest = require('supertest'),
-			app = require('./app.js');
 
 	it('should get index page', function (done) {
 		supertest(app)
