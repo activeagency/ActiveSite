@@ -1,4 +1,6 @@
 module.exports = function() {
+	'use strict';
+
   var site = {
     title: "Active Agency",
     heading: "Future Site of Active Agency",
