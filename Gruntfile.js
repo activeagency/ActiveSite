@@ -17,6 +17,10 @@ module.exports = function(grunt) {
 
       deploy: {
         cmd: 'git push heroku master'
+      },
+
+      test: {
+        cmd: 'mocha'
       }
     }
   });
@@ -26,6 +30,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', []);
   grunt.registerTask('css', ['sass']);
-  grunt.registerTask('deploy', ['exec:deploy']);
-  grunt.registerTask('run', ['css', 'exec:run']);
+  grunt.registerTask('test', ['exec:test']);
+  grunt.registerTask('deploy', ['exec:test', 'exec:deploy']);
+  grunt.registerTask('run', ['css', 'exec:test', 'exec:run']);
 };
